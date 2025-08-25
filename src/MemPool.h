@@ -20,8 +20,9 @@ public:
 	uint32_t getUsed() const;
 
 	// Get used percentage
-	uint8_t getUsedPercentage() const;
+	float getUsedPercentage() const;
 
+	// Reset 
 	void reset();
 
 private:

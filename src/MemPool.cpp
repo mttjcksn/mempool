@@ -64,14 +64,14 @@ uint32_t MemPool::getUsed() const
 	return mPoolSize - mSizeRemaining;
 }
 
-uint8_t MemPool::getUsedPercentage() const
+float MemPool::getUsedPercentage() const
 {
 	if (mPoolSize == 0)
 	{
 		return 0;
 	}
 	uint32_t used = getUsed();
-	return static_cast<uint8_t>((used * 100) / mPoolSize);
+	return (used * 100.0f) / mPoolSize;
 }
 
 uint32_t MemPool::alignSize(uint32_t bytes) const
